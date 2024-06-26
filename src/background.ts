@@ -1,4 +1,4 @@
-import { ecc } from 'factorial-clock-in';
+import ecc from 'factorial-clock-in';
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'executeBatch') {

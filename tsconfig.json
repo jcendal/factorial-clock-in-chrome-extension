@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "paths": {}
+    "paths": {},
+    "types": ["@types/chrome", "factorial-clock-in"]
   },
   "ts-node": {
     "compilerOptions": {

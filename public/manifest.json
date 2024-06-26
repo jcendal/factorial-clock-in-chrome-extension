@@ -7,9 +7,16 @@
     "service_worker": "js/background.js"
   },
   "action": {
-    "default_icon": "icon-16.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "128": "icon-128.png"
+    },
+    "icon": {
+      "16": "icon-16.png",
+      "128": "icon-128.png"
+    }
   },
-  "permissions": ["tabs", "activeTab", "storage", "activeTab"],
-  "host_permissions": ["*://api.factorialhr.com/*"]
+  "permissions": ["runtime", "tabs"],
+  "host_permissions": ["*://app.factorialhr.com/*"]
 }

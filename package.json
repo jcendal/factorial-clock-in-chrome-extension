@@ -1,6 +1,6 @@
 {
   "name": "factorial-clock-in-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chrome extension to manage your work hours in Factorial",
   "author": "Jorge Cendal",
   "license": "MIT",
@@ -10,11 +10,14 @@
   },
   "main": "dist/index.ts",
   "scripts": {
+    "clean": "rm -rf dist",
     "start": "ts-node src/main.ts",
-    "build": "tsc && webpack --config webpack/webpack.prod.js",
-    "clean": "rm -rf dist"
+    "build": "npm run clean && webpack --config webpack/webpack.prod.js"
   },
   "keywords": [],
+  "dependencies": {
+    "factorial-clock-in": "^1.0.12"
+  },
   "devDependencies": {
     "@types/chrome": "0.0.268",
     "copy-webpack-plugin": "12.0.2",
@@ -35,8 +38,5 @@
     "node": ">=20.11.0",
     "npm": "^10.2.4",
     "yarn": "Please use NPM instead of yarn to install dependencies"
-  },
-  "dependencies": {
-    "factorial-clock-in": "^1.0.3"
   }
 }
