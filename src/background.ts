@@ -1,9 +1,8 @@
-import ecc from 'factorial-clock-in';
+import { batch } from 'factorial-clock-in';
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'executeBatch') {
-    ecc
-      .batch(message.data)
+    batch(message.data)
       .then((response) => {
         console.log(response);
         sendResponse(response);

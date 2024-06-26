@@ -1,42 +1,35 @@
-# Instrucciones
+## Política de Privacidad
 
-1. Ejecutar el siguiente comando en la terminal:
+Esta extensión, Factorial TimeTracker Automation, respeta tu privacidad y no
+recopila ni utiliza ningún dato personal de los usuarios.
 
-```bash
-npm run build
-```
+### Recopilación de Datos
 
-2. Compiar el contenido del fichero `dist/index.js` en la consola de Factorial
-   en la página de fichaje de horas.
+Factorial TimeTracker Automation no recopila información personal identificable
+ni datos sensibles de los usuarios.
 
-3. Por último, ejecutar la siguiente función en la página de fichaje de horas de
-   Factorial personalizando los valores para cada empleado.
+### Uso de Datos
 
-```javascript
-ecc
-  .batch({
-    month: 2, // Los meses empiezan en 0
-    year: 2024,
-    employee_id: 1417389,
-    intervals: [
-      {
-        clock_in: '08:30',
-        clock_out: '14:00',
-      },
-      {
-        clock_in: '16:00',
-        clock_out: '18:30',
-      },
-    ],
-    minutes_per_day: 480,
-    // dry_run: true,
-  })
-  .then();
-```
+No se recopilan ni utilizan datos personales de ningún tipo a través de esta
+extensión.
 
-4. Se pueden eliminar todas las horas de un periodo automáticamente de la
-   siguiente manera:
+### Seguridad de los Datos
 
-```javascript
-ecc.deleteAllShiftsByPeriodId({ period_id: 13401838 }).then();
-```
+No se almacenan ni se procesan datos personales ni cualquier otro tipo de
+información sensible.
+
+### Contacto
+
+Si tienes alguna pregunta o inquietud sobre la privacidad al usar nuestra
+extensión, no dudes en contactarnos a través de los canales de soporte
+proporcionados.
+
+### Cambios en la Política de Privacidad
+
+Nos reservamos el derecho de actualizar esta política de privacidad en el futuro
+para reflejar cambios en nuestras prácticas de privacidad o en la extensión
+misma. Se recomienda revisar periódicamente esta política para estar informado
+sobre cómo protegemos tu información.
+
+Esta política de privacidad está destinada a informarte sobre cómo manejamos la
+privacidad cuando usas la extensión Factorial TimeTracker Automation.
