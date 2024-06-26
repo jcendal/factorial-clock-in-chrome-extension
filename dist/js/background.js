@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener(((e,t,n)=>{if("executeBatch"===e.action)return!0}));

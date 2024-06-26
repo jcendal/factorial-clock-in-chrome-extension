@@ -1,0 +1,74 @@
+{
+  // Icon theme to folders and files
+  "workbench.iconTheme": "material-icon-theme",
+
+  "editor.snippetSuggestions": "top",
+
+  // If `esbenp.prettier-vscode` is not being used, next option should be removed otherwise it will break existing formatting.
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "prettier.prettierPath": "./node_modules/prettier",
+
+  // Auto-close tags
+  "editor.linkedEditing": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+
+  "[javascript]": {
+    // Default formatter for JavaScript documents.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  "[typescript]": {
+    // Default formatter for TypeScript documents.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "[json]": {
+    // Default formatter for JSON documents.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  "[jsonc]": {
+    // Default formatter for JSON documents with comments.
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+
+  // Exclude third party modules and build artifacts from the editor watchers/searches.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/apps/**/node_modules/**": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/apps/**/android/**": true,
+    "**/apps/**/ios/**": true,
+    "**/apps/**/node_modules/**": true,
+    ".history": true
+  },
+
+  // Git config
+  "git.ignoreLimitWarning": true,
+  "[git-commit]": {
+    "workbench.editor.restoreViewState": false
+  }
+}

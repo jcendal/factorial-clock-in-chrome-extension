@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Factorial TimeTracker Automation",
+  "version": "1.0",
+  "description": "A Chrome extension to execute automatice time tracking on Factorial HR",
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_icon": "icon-16.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "activeTab", "storage", "activeTab"],
+  "host_permissions": ["*://api.factorialhr.com/*"]
+}
