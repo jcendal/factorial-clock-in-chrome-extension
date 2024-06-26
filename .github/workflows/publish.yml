@@ -1,0 +1,41 @@
+name: Publish Chrome Extension
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Zip files
+        run: zip -r extension.zip dist
+
+      - name: Publish to Chrome Web Store
+        uses: w9jds/publish-chrome-extension@v2.0.0
+        with:
+          asset: ./extension.zip
+          client_id: ${{ secrets.CHROME_EXTENSION_CLIENT_ID }}
+          client_secret: ${{ secrets.CHROME_EXTENSION_CLIENT_SECRET }}
+          refresh_token: ${{ secrets.CHROME_EXTENSION_REFRESH_TOKEN }}
+          extension_id: ${{ secrets.CHROME_EXTENSION_ID }}
+          publish: true
