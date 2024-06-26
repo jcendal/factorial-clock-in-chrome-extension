@@ -17,6 +17,18 @@
       "128": "icon-128.png"
     }
   },
-  "permissions": ["runtime", "tabs"],
-  "host_permissions": ["*://app.factorialhr.com/*"]
+  "permissions": ["tabs", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": [
+    "*://app.factorialhr.com/*",
+    "*://api.factorialhr.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
 }

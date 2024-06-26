@@ -1,5 +1,11 @@
 import { batch } from 'factorial-clock-in';
 
+// chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(
+//   ({ request, rule }) => {
+//     console.log('onMatchedRuleDebug', rule.ruleId, JSON.stringify(request));
+//   }
+// );
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'executeBatch') {
     batch(message.data)

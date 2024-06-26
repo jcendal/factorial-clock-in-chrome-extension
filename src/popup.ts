@@ -51,9 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
   executeBtn.addEventListener('click', () => {
     const month = parseInt(monthInput.value);
     const year = parseInt(yearInput.value);
-    const employee_id = parseInt(
-      (document.getElementById('employee_id') as HTMLInputElement).value
-    );
     const minutes_per_day = parseInt(minutesPerDayInput.value);
 
     const intervalDivs = intervalsContainer.querySelectorAll('.interval');
@@ -71,23 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const data: ClockInOptions = {
       month,
       year,
-      employee_id,
       intervals,
       minutes_per_day,
     };
 
     console.log('Data to send:', data);
-    if (employee_id) {
-      chrome.runtime.sendMessage(
-        { action: 'executeBatch', data },
-        (response) => {
-          console.log('Respuesta recibida:', response);
-          chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-            chrome.tabs.reload(tabs[0].id);
-          });
-        }
-      );
-    }
+
+    chrome.runtime.sendMessage({ action: 'executeBatch', data }, (response) => {
+      console.log('Respuesta recibida:', response);
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.reload(tabs[0].id);
+      });
+    });
   });
 
   // Agregar un intervalo inicial con valores predeterminados
@@ -95,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Establecer el mes actual y el año actual como valores por defecto
   const currentDate = new Date();
-  monthInput.value = String(currentDate.getMonth() + 1); // Ajuste para base-0 a base-1
+  monthInput.value = String(currentDate.getMonth());
   yearInput.value = String(currentDate.getFullYear());
   minutesPerDayInput.value =
     currentDate.getMonth() >= 6 && currentDate.getMonth() <= 8 ? '420' : '480';
