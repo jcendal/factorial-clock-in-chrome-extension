@@ -1,6 +1,6 @@
 {
   "name": "factorial-clock-in-chrome-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Chrome extension to manage your work hours in Factorial",
   "author": "Jorge Cendal",
   "license": "MIT",
@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "factorial-clock-in": "1.0.13"
+    "@pachamamas/factorial-clock-in": "^1.0.2"
   },
   "devDependencies": {
     "@types/chrome": "0.0.268",

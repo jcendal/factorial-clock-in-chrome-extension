@@ -1,4 +1,4 @@
-import { batch } from 'factorial-clock-in';
+import { batch } from '@pachamamas/factorial-clock-in';
 
 // chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(
 //   ({ request, rule }) => {
