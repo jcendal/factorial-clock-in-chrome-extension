@@ -1,35 +1,47 @@
-## Política de Privacidad
+# Factorial TimeTracker Automation
 
-Esta extensión, Factorial TimeTracker Automation, respeta tu privacidad y no
-recopila ni utiliza ningún dato personal de los usuarios.
+This project is a Chrome extension designed to automate the clocking in and out
+of work hours in Factorial, a time-tracking tool. The extension allows users to
+specify intervals for clocking in and out, the month, the year, and the minutes
+per day to be recorded.
 
-### Recopilación de Datos
+## Features
 
-Factorial TimeTracker Automation no recopila información personal identificable
-ni datos sensibles de los usuarios.
+- **Add multiple intervals**: Users can add multiple time intervals for clocking
+  in and out.
+- **Dynamic inputs**: Set the month, year, and minutes per day.
+- **Automatic execution**: Automatically sends the specified data to a
+  background script to be processed and recorded in Factorial.
 
-### Uso de Datos
+## Installation
 
-No se recopilan ni utilizan datos personales de ningún tipo a través de esta
-extensión.
+### From the Chrome Web Store
 
-### Seguridad de los Datos
+1. Open Google Chrome and go to the
+   [Chrome Web Store](https://chrome.google.com/webstore).
+2. Search for "Factorial TimeTracker Automation".
+3. Click on the extension in the search results.
+4. Click the "Add to Chrome" button.
+5. Confirm the installation by clicking "Add extension".
 
-No se almacenan ni se procesan datos personales ni cualquier otro tipo de
-información sensible.
+### Manual Installation
 
-### Contacto
+1. Clone or download this repository to your local machine.
+2. Open Google Chrome and go to `chrome://extensions/`.
+3. Enable "Developer mode" by clicking the toggle switch in the top right
+   corner.
+4. Click the "Load unpacked" button.
+5. Select the directory where you cloned or downloaded the repository.
+6. The extension should now appear in your list of installed extensions.
 
-Si tienes alguna pregunta o inquietud sobre la privacidad al usar nuestra
-extensión, no dudes en contactarnos a través de los canales de soporte
-proporcionados.
+## Usage
 
-### Cambios en la Política de Privacidad
-
-Nos reservamos el derecho de actualizar esta política de privacidad en el futuro
-para reflejar cambios en nuestras prácticas de privacidad o en la extensión
-misma. Se recomienda revisar periódicamente esta política para estar informado
-sobre cómo protegemos tu información.
-
-Esta política de privacidad está destinada a informarte sobre cómo manejamos la
-privacidad cuando usas la extensión Factorial TimeTracker Automation.
+1. Click on the Factorial TimeTracker Automation icon in the Chrome toolbar to
+   open the popup.
+2. Set the month and year using the corresponding input fields.
+3. Add intervals for clocking in and out by clicking the "Add interval" button.
+   Each interval includes a clock-in time and a clock-out time.
+4. Set the minutes per day based on your schedule (e.g., 480 minutes for a full
+   day, 420 minutes for summer).
+5. Click the "Execute" button to send the data to the background script, which
+   will process it and interact with Factorial.
